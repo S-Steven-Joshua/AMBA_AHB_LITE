@@ -1,4 +1,5 @@
 <img width="1573" height="807" alt="Image" src="https://github.com/user-attachments/assets/15274787-160f-4ded-8622-e29072b34c69" />
+
 45ns - 55ns Address phase for the address 0000_0010 with Hwrite=1 Hburst=0 and Hsize=0 (1byte)
 
 55ns - 65ns Data phase for the address 0000_0010 with Hwdata=0000_00ab 
