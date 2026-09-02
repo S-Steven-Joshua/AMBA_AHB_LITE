@@ -1,3 +1,5 @@
+<img width="1576" height="810" alt="Image" src="https://github.com/user-attachments/assets/26f8144d-144b-44b2-85e3-9ab6535e7d21" />
+
 # AHB Burst Test — Early Termination of Undefined-Length Burst Followed by WRAP4
 
 This simulation demonstrates two back-to-back AHB transactions:
