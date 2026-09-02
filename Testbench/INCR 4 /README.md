@@ -1,3 +1,4 @@
+<img width="1568" height="815" alt="Image" src="https://github.com/user-attachments/assets/cab7b905-eff3-452d-af9d-b8ed13c80be2" />
 
 ## AHB INCR4 Burst — 1-Byte Write and Read
 
