@@ -1,4 +1,5 @@
 <img width="1581" height="803" alt="Image" src="https://github.com/user-attachments/assets/82fa057e-7ae1-4432-bfd3-d51987595e08" />
+
 # AHB WRAP4 Burst — HSIZE = 2 with BUSY State
 
 The waveform shows a **4-beat AHB WRAP4 write burst** with `HSIZE = 2`, so each transfer is **4 bytes**. A `BUSY` transfer occurs between Beat 2 and Beat 3.
