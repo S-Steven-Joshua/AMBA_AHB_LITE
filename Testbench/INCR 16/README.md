@@ -1,3 +1,5 @@
+<img width="1573" height="807" alt="Image" src="https://github.com/user-attachments/assets/1e407897-7a28-4a9a-909c-d8ec7bb83fe6" />
+
 ## AHB INCR16 Burst — 2-Byte Write and Read
 
 The following simulation demonstrates an **AHB INCR16 burst** for both **write and read operations** with `HSIZE = 1`.
