@@ -50,26 +50,26 @@ The important observation is that the burst **does not continue indefinitely**. 
 
 ### Timing observed in the waveform
 
-- **~30–40 ns:** First transfer
+- **~45–55 ns:** First transfer
   - `HTRANS = NONSEQ`
   - `HBURST = INCR`
   - `HSIZE = 2`
   - Starting address is associated with the first transaction.
 
-- **~40–50 ns:** Next sequential transfer
+- **~55–65 ns:** Next sequential transfer
   - `HTRANS = SEQ`
   - Address advances by 4 bytes.
 
-- **~50–60 ns:** Next sequential transfer
+- **~65–75 ns:** Next sequential transfer
   - `HTRANS = SEQ`
   - Address advances by another 4 bytes.
 
-- **~60–70 ns:** BUSY interval
+- **~76–86 ns:** BUSY interval
   - `HTRANS = BUSY`
   - No additional data beat is counted for the burst.
   - The burst is subsequently terminated.
 
-- **~70–110 ns:** `HTRANS = IDLE`
+- **~86–126 ns:** `HTRANS = IDLE`
   - The undefined-length burst has ended.
   - The bus remains idle before the next transaction starts.
 
@@ -107,25 +107,25 @@ NONSEQ → SEQ → SEQ → SEQ
 
 ### Timing observed in the waveform
 
-- **~110–120 ns:** First WRAP4 transfer
+- **~135–145 ns:** First WRAP4 transfer
   - `HTRANS = NONSEQ`
   - `HBURST = WRAP4`
   - `HSIZE = 2`
   - Starting address: `0x0000_0020`
 
-- **~120–130 ns:** WRAP4 Beat 2
+- **~145–155 ns:** WRAP4 Beat 2
   - `HTRANS = SEQ`
   - Address advances by 4 bytes.
 
-- **~130–140 ns:** WRAP4 Beat 3
+- **~155–165 ns:** WRAP4 Beat 3
   - `HTRANS = SEQ`
   - Address advances by 4 bytes.
 
-- **~140–150 ns:** WRAP4 Beat 4
+- **~165–175 ns:** WRAP4 Beat 4
   - `HTRANS = SEQ`
   - Final transfer of the four-beat WRAP4 burst.
 
-- **~150 ns onward:** Transaction returns to `IDLE`.
+- **~166 ns onward:** Transaction returns to `IDLE`.
 
 ---
 
@@ -162,47 +162,6 @@ After `0x0000_002C`, another transfer would wrap back to:
 
 ---
 
-# Transaction Sequence Summary
-
-```text
-FIRST TRANSACTION
-────────────────────────────────────────────
-
-HBURST = INCR
-HSIZE  = 2
-
-IDLE
-  │
-  ├── NONSEQ   (~30–40 ns)
-  │
-  ├── SEQ      (~40–50 ns)
-  │
-  ├── SEQ      (~50–60 ns)
-  │
-  ├── BUSY     (~60–70 ns)
-  │
-  └── IDLE     (~70–110 ns)
-             ↑
-       Early termination
-
-
-SECOND TRANSACTION
-────────────────────────────────────────────
-
-HBURST = WRAP4
-HSIZE  = 2
-
-IDLE
-  │
-  ├── NONSEQ   (~110–120 ns) → 0x20
-  ├── SEQ      (~120–130 ns) → 0x24
-  ├── SEQ      (~130–140 ns) → 0x28
-  ├── SEQ      (~140–150 ns) → 0x2C
-  │
-  └── IDLE
-```
-
----
 
 # Key Observation
 
