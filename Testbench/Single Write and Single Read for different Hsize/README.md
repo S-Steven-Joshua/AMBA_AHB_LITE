@@ -1,26 +1,103 @@
 <img width="1573" height="807" alt="Image" src="https://github.com/user-attachments/assets/15274787-160f-4ded-8622-e29072b34c69" />
 
-**45ns - 55ns Address phase for the address 0000_0010 with Hwrite=1 Hburst=0 and Hsize=0 (1byte)**
+## AHB Read/Write Transaction Timing
 
-**55ns - 65ns Data phase for the address 0000_0010 with Hwdata=0000_00ab**
+The following transactions demonstrate **AHB write and read operations** for different transfer sizes: 1 byte, 2 bytes, and 4 bytes.
 
-**85ns - 95ns Address phase for the address 0000_0010 with Hwrite=0 Hburst=0 and Hsize=0**
+### 1. 1-Byte Write Transaction
 
-**95ns - 105ns Data phase for the address 0000_0010 with Hrdata=0000_00ab**
+* **45 ns – 55 ns:** Address phase
 
-**125ns - 135ns Address phase for the address 0000_0012 with Hwrite=1 Hburst=0 and Hsize=1(2 bytes)**
+  * Address: `0x0000_0010`
+  * `HWRITE = 1`
+  * `HBURST = 0`
+  * `HSIZE = 0` (1 byte)
 
-**135ns - 145ns Data phase for the address 0000_0012 with Hwdata=0000_abcd**
+* **55 ns – 65 ns:** Data phase
 
-**165ns - 175ns Address phase for the address 0000_0012 with the Hwrite=0 Hburst=0 and Hsize=1**
+  * Write data (`HWDATA`): `0x0000_00AB`
 
-**175ns - 185ns Data phase for the address 0000_0012 with the Hrdata=0000_abcd**
+### 2. 1-Byte Read Transaction
 
-**205ns - 215ns Addres phase for the address 0000_0014 with Hwrite=1 Hburst=0 and Hsize=2 (4 bytes)**
+* **85 ns – 95 ns:** Address phase
 
-**215ns - 225 ns Data phase for the address 0000_0014 with Hwdata=dead_beef**
+  * Address: `0x0000_0010`
+  * `HWRITE = 0`
+  * `HBURST = 0`
+  * `HSIZE = 0` (1 byte)
 
-**245ns - 255ns Address phase for the address 0000_0014 with Hwrite=0 Hburst=0 and Hsize=2**
+* **95 ns – 105 ns:** Data phase
 
-**255ns - 265ns Data phase for the address 0000_0014 with the Hrdata=dead_beef**
+  * Read data (`HRDATA`): `0x0000_00AB`
+
+---
+
+### 3. 2-Byte Write Transaction
+
+* **125 ns – 135 ns:** Address phase
+
+  * Address: `0x0000_0012`
+  * `HWRITE = 1`
+  * `HBURST = 0`
+  * `HSIZE = 1` (2 bytes)
+
+* **135 ns – 145 ns:** Data phase
+
+  * Write data (`HWDATA`): `0x0000_ABCD`
+
+### 4. 2-Byte Read Transaction
+
+* **165 ns – 175 ns:** Address phase
+
+  * Address: `0x0000_0012`
+  * `HWRITE = 0`
+  * `HBURST = 0`
+  * `HSIZE = 1` (2 bytes)
+
+* **175 ns – 185 ns:** Data phase
+
+  * Read data (`HRDATA`): `0x0000_ABCD`
+
+---
+
+### 5. 4-Byte Write Transaction
+
+* **205 ns – 215 ns:** Address phase
+
+  * Address: `0x0000_0014`
+  * `HWRITE = 1`
+  * `HBURST = 0`
+  * `HSIZE = 2` (4 bytes)
+
+* **215 ns – 225 ns:** Data phase
+
+  * Write data (`HWDATA`): `0xDEAD_BEEF`
+
+### 6. 4-Byte Read Transaction
+
+* **245 ns – 255 ns:** Address phase
+
+  * Address: `0x0000_0014`
+  * `HWRITE = 0`
+  * `HBURST = 0`
+  * `HSIZE = 2` (4 bytes)
+
+* **255 ns – 265 ns:** Data phase
+
+  * Read data (`HRDATA`): `0xDEAD_BEEF`
+
+---
+
+### Transaction Summary
+
+| Transfer | Address       | Operation | `HSIZE` | Write Data    | Read Data     |
+| -------- | ------------- | --------- | ------- | ------------- | ------------- |
+| 1 Byte   | `0x0000_0010` | Write     | `0`     | `0x0000_00AB` | —             |
+| 1 Byte   | `0x0000_0010` | Read      | `0`     | —             | `0x0000_00AB` |
+| 2 Bytes  | `0x0000_0012` | Write     | `1`     | `0x0000_ABCD` | —             |
+| 2 Bytes  | `0x0000_0012` | Read      | `1`     | —             | `0x0000_ABCD` |
+| 4 Bytes  | `0x0000_0014` | Write     | `2`     | `0xDEAD_BEEF` | —             |
+| 4 Bytes  | `0x0000_0014` | Read      | `2`     | —             | `0xDEAD_BEEF` |
+
+> **Note:** Each AHB transfer consists of an **address phase** followed by a **data phase**. The examples above verify read-after-write behavior for 1-byte, 2-byte, and 4-byte transfers.
 
