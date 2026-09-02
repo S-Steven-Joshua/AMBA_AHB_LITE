@@ -1,5 +1,3 @@
-<img width="1573" height="807" alt="Image" src="https://github.com/user-attachments/assets/1e407897-7a28-4a9a-909c-d8ec7bb83fe6" />
-
 ## AHB INCR16 Burst — 2-Byte Write and Read
 
 The following simulation demonstrates an **AHB INCR16 burst** for both **write and read operations** with `HSIZE = 1`.
@@ -218,198 +216,198 @@ The write burst starts at **45 ns** with the initial address `0x0000_0010`.
 
 ## 2. AHB INCR16 Read Burst
 
-The read burst starts at **225 ns** with the same starting address `0x0000_0010`.
+The read burst starts at **245 ns** with the same starting address `0x0000_0010`.
 
 ### Beat 1
 
-- **225 ns – 235 ns:** Address phase
+- **245 ns – 255 ns:** Address phase
   - Address: `0x0000_0010`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = NONSEQ`
 
-- **235 ns – 245 ns:** Data phase
+- **255 ns – 265 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0010`
 
 ### Beat 2
 
-- **235 ns – 245 ns:** Address phase
+- **255 ns – 265 ns:** Address phase
   - Address: `0x0000_0012`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **245 ns – 255 ns:** Data phase
+- **265 ns – 275 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0012`
 
 ### Beat 3
 
-- **245 ns – 255 ns:** Address phase
+- **265 ns – 275 ns:** Address phase
   - Address: `0x0000_0014`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **255 ns – 265 ns:** Data phase
+- **275 ns – 285 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0014`
 
 ### Beat 4
 
-- **255 ns – 265 ns:** Address phase
+- **275 ns – 285 ns:** Address phase
   - Address: `0x0000_0016`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **265 ns – 275 ns:** Data phase
+- **285 ns – 295 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0016`
 
 ### Beat 5
 
-- **265 ns – 275 ns:** Address phase
+- **285 ns – 295 ns:** Address phase
   - Address: `0x0000_0018`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **275 ns – 285 ns:** Data phase
+- **295 ns – 305 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0018`
 
 ### Beat 6
 
-- **275 ns – 285 ns:** Address phase
+- **295 ns – 305 ns:** Address phase
   - Address: `0x0000_001A`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **285 ns – 295 ns:** Data phase
+- **305 ns – 315 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_001A`
 
 ### Beat 7
 
-- **285 ns – 295 ns:** Address phase
+- **305 ns – 315 ns:** Address phase
   - Address: `0x0000_001C`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **295 ns – 305 ns:** Data phase
+- **315 ns – 325 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_001C`
 
 ### Beat 8
 
-- **295 ns – 305 ns:** Address phase
+- **315 ns – 325 ns:** Address phase
   - Address: `0x0000_001E`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **305 ns – 315 ns:** Data phase
+- **325 ns – 335 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_001E`
 
 ### Beat 9
 
-- **305 ns – 315 ns:** Address phase
+- **325 ns – 335 ns:** Address phase
   - Address: `0x0000_0020`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **315 ns – 325 ns:** Data phase
+- **335 ns – 345 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0020`
 
 ### Beat 10
 
-- **315 ns – 325 ns:** Address phase
+- **335 ns – 345 ns:** Address phase
   - Address: `0x0000_0022`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **325 ns – 335 ns:** Data phase
+- **345 ns – 355 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0022`
 
 ### Beat 11
 
-- **325 ns – 335 ns:** Address phase
+- **345 ns – 355 ns:** Address phase
   - Address: `0x0000_0024`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **335 ns – 345 ns:** Data phase
+- **355 ns – 365 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0024`
 
 ### Beat 12
 
-- **335 ns – 345 ns:** Address phase
+- **355 ns – 365 ns:** Address phase
   - Address: `0x0000_0026`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **345 ns – 355 ns:** Data phase
+- **365 ns – 375 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0026`
 
 ### Beat 13
 
-- **345 ns – 355 ns:** Address phase
+- **365 ns – 375 ns:** Address phase
   - Address: `0x0000_0028`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **355 ns – 365 ns:** Data phase
+- **375 ns – 385 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_0028`
 
 ### Beat 14
 
-- **355 ns – 365 ns:** Address phase
+- **375 ns – 385 ns:** Address phase
   - Address: `0x0000_002A`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **365 ns – 375 ns:** Data phase
+- **385 ns – 395 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_002A`
 
 ### Beat 15
 
-- **365 ns – 375 ns:** Address phase
+- **385 ns – 395 ns:** Address phase
   - Address: `0x0000_002C`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **375 ns – 385 ns:** Data phase
+- **395 ns – 405 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_002C`
 
 ### Beat 16
 
-- **375 ns – 385 ns:** Address phase
+- **395 ns – 405 ns:** Address phase
   - Address: `0x0000_002E`
   - `HWRITE = 0`
   - `HBURST = INCR16`
   - `HSIZE = 1` (2 bytes)
   - `HTRANS = SEQ`
 
-- **385 ns – 395 ns:** Data phase
+- **405 ns – 415 ns:** Data phase
   - Read data (`HRDATA`): Data stored at `0x0000_002E`
 
 ---
@@ -434,22 +432,22 @@ The read burst starts at **225 ns** with the same starting address `0x0000_0010`
 | Write | 14 | 175–185 ns | `0x0000_002A` | `SEQ` | `1` | `INCR16` | `1` (2B) | 185–195 ns |
 | Write | 15 | 185–195 ns | `0x0000_002C` | `SEQ` | `1` | `INCR16` | `1` (2B) | 195–205 ns |
 | Write | 16 | 195–205 ns | `0x0000_002E` | `SEQ` | `1` | `INCR16` | `1` (2B) | 205–215 ns |
-| Read | 1 | 225–235 ns | `0x0000_0010` | `NONSEQ` | `0` | `INCR16` | `1` (2B) | 235–245 ns |
-| Read | 2 | 235–245 ns | `0x0000_0012` | `SEQ` | `0` | `INCR16` | `1` (2B) | 245–255 ns |
-| Read | 3 | 245–255 ns | `0x0000_0014` | `SEQ` | `0` | `INCR16` | `1` (2B) | 255–265 ns |
-| Read | 4 | 255–265 ns | `0x0000_0016` | `SEQ` | `0` | `INCR16` | `1` (2B) | 265–275 ns |
-| Read | 5 | 265–275 ns | `0x0000_0018` | `SEQ` | `0` | `INCR16` | `1` (2B) | 275–285 ns |
-| Read | 6 | 275–285 ns | `0x0000_001A` | `SEQ` | `0` | `INCR16` | `1` (2B) | 285–295 ns |
-| Read | 7 | 285–295 ns | `0x0000_001C` | `SEQ` | `0` | `INCR16` | `1` (2B) | 295–305 ns |
-| Read | 8 | 295–305 ns | `0x0000_001E` | `SEQ` | `0` | `INCR16` | `1` (2B) | 305–315 ns |
-| Read | 9 | 305–315 ns | `0x0000_0020` | `SEQ` | `0` | `INCR16` | `1` (2B) | 315–325 ns |
-| Read | 10 | 315–325 ns | `0x0000_0022` | `SEQ` | `0` | `INCR16` | `1` (2B) | 325–335 ns |
-| Read | 11 | 325–335 ns | `0x0000_0024` | `SEQ` | `0` | `INCR16` | `1` (2B) | 335–345 ns |
-| Read | 12 | 335–345 ns | `0x0000_0026` | `SEQ` | `0` | `INCR16` | `1` (2B) | 345–355 ns |
-| Read | 13 | 345–355 ns | `0x0000_0028` | `SEQ` | `0` | `INCR16` | `1` (2B) | 355–365 ns |
-| Read | 14 | 355–365 ns | `0x0000_002A` | `SEQ` | `0` | `INCR16` | `1` (2B) | 365–375 ns |
-| Read | 15 | 375–385 ns | `0x0000_002C` | `SEQ` | `0` | `INCR16` | `1` (2B) | 385–395 ns |
-| Read | 16 | 385–395 ns | `0x0000_002E` | `SEQ` | `0` | `INCR16` | `1` (2B) | 395–405 ns |
+| Read | 1 | 245–255 ns | `0x00000010` | `NONSEQ` | `0` | `INCR16` | `1` (2B) | 255–265 ns |
+| Read | 2 | 255–265 ns | `0x00000012` | `SEQ` | `0` | `INCR16` | `1` (2B) | 265–275 ns |
+| Read | 3 | 265–275 ns | `0x00000014` | `SEQ` | `0` | `INCR16` | `1` (2B) | 275–285 ns |
+| Read | 4 | 275–285 ns | `0x00000016` | `SEQ` | `0` | `INCR16` | `1` (2B) | 285–295 ns |
+| Read | 5 | 285–295 ns | `0x00000018` | `SEQ` | `0` | `INCR16` | `1` (2B) | 295–305 ns |
+| Read | 6 | 295–305 ns | `0x0000001A` | `SEQ` | `0` | `INCR16` | `1` (2B) | 305–315 ns |
+| Read | 7 | 305–315 ns | `0x0000001C` | `SEQ` | `0` | `INCR16` | `1` (2B) | 315–325 ns |
+| Read | 8 | 315–325 ns | `0x0000001E` | `SEQ` | `0` | `INCR16` | `1` (2B) | 325–335 ns |
+| Read | 9 | 325–335 ns | `0x00000020` | `SEQ` | `0` | `INCR16` | `1` (2B) | 335–345 ns |
+| Read | 10 | 335–345 ns | `0x00000022` | `SEQ` | `0` | `INCR16` | `1` (2B) | 345–355 ns |
+| Read | 11 | 345–355 ns | `0x00000024` | `SEQ` | `0` | `INCR16` | `1` (2B) | 355–365 ns |
+| Read | 12 | 355–365 ns | `0x00000026` | `SEQ` | `0` | `INCR16` | `1` (2B) | 365–375 ns |
+| Read | 13 | 365–375 ns | `0x00000028` | `SEQ` | `0` | `INCR16` | `1` (2B) | 375–385 ns |
+| Read | 14 | 375–385 ns | `0x0000002A` | `SEQ` | `0` | `INCR16` | `1` (2B) | 385–395 ns |
+| Read | 15 | 385–395 ns | `0x0000002C` | `SEQ` | `0` | `INCR16` | `1` (2B) | 395–405 ns |
+| Read | 16 | 395–405 ns | `0x0000002E` | `SEQ` | `0` | `INCR16` | `1` (2B) | 405–415 ns |
 
 ---
 
