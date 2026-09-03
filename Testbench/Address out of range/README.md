@@ -1,3 +1,5 @@
+<img width="1572" height="806" alt="Image" src="https://github.com/user-attachments/assets/b489eca0-d64b-4dc8-a3f1-fa8e72c343c8" />
+
 # AHB-Lite HREADY and HRESP — Address Out-of-Range ERROR Verification
 
 ## 1. Objective
@@ -73,7 +75,7 @@ Htrans_m = 2
 The write data shown on the master side is:
 
 ```text
-Hwdata_m = dead...
+Hwdata_m = deadbeef
 ```
 
 and the corresponding slave-side write data is:
