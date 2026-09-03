@@ -1,3 +1,5 @@
+<img width="1572" height="812" alt="Image" src="https://github.com/user-attachments/assets/8d9b7175-457d-4dd0-a71a-b065fed2b117" />
+
 # AHB-Lite HREADY and HRESP Error Response Verification
 
 ## 1. Objective
@@ -17,34 +19,7 @@ The waveform contains two ERROR response events:
 
 ---
 
-## 2. Signals Observed
-
-The waveform contains the following important AHB-Lite signals.
-
-| Signal | Purpose |
-|---|---|
-| `Hclk` | AHB clock |
-| `Hrstn` | Active-low reset |
-| `Haddr_m[31:0]` | Master address |
-| `Hwdata_m[31:0]` | Master write data |
-| `Hwrite_m` | Indicates read/write operation |
-| `Htrans_m[1:0]` | AHB transfer type |
-| `Hburst_m[2:0]` | Burst information |
-| `Hsize_m[2:0]` | Transfer size |
-| `Hready` | Indicates whether the current transfer/response is complete |
-| `Hresp` | Indicates the transfer response |
-| `Hrdata[31:0]` | Read data |
-| `Haddr[31:0]` | Slave-side address |
-| `Hwdata[31:0]` | Slave-side write data |
-| `Hwrite` | Slave-side read/write indication |
-| `Htrans[1:0]` | Slave-side transfer type |
-| `Hburst[2:0]` | Slave-side burst information |
-| `Hsize[2:0]` | Slave-side transfer size |
-| `ram[15:0][31:0]` | Memory contents |
-
----
-
-## 3. AHB-Lite ERROR Response
+## 2. AHB-Lite ERROR Response
 
 For an AHB-Lite ERROR response, the response is presented over **two cycles**.
 
@@ -71,7 +46,7 @@ The uploaded waveform demonstrates this behavior for both a write transaction an
 
 ---
 
-## 4. First ERROR Response — Write Transaction
+## 3. First ERROR Response — Write Transaction
 
 The **first ERROR response occurs during the write transaction**, approximately between **55 ns and 75 ns**.
 
@@ -111,7 +86,7 @@ HRESP  : 1 → 1
 
 ---
 
-## 5. Second ERROR Response — Read Transaction
+## 4. Second ERROR Response — Read Transaction
 
 The **second ERROR response occurs during the read transaction**, approximately between **135 ns and 155 ns**.
 
@@ -151,7 +126,7 @@ HRESP  : 1 → 1
 
 ---
 
-## 6. Complete ERROR Response Verification
+## 5. Complete ERROR Response Verification
 
 The two ERROR response events visible in the waveform can be summarized as follows:
 
