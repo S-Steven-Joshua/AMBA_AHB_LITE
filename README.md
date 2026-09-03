@@ -196,14 +196,6 @@ The project includes verification for:
 - `WRAP8`
 - `WRAP16`
 
-Selected transfer-size combinations are exercised, including:
-
-```text
-WRAP4  + HSIZE=0
-WRAP4  + HSIZE=1
-WRAP4  + HSIZE=2
-WRAP16 + HSIZE=2
-```
 
 The master calculates the wrapping boundary from the burst length and transfer size.
 
